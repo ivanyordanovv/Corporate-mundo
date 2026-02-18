@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL
+
 const PRODUCTS = [
   {
     id: 'suitcase',
@@ -9,13 +11,13 @@ const PRODUCTS = [
     id: 'telephone',
     name: 'Corporate Telephone',
     description: 'Call the office. Tell them you\'re going in. Then hang up and PUSH.',
-    image: '/images/telephone.jpg',
+    image: `${BASE}images/telephone.jpg`,
   },
   {
     id: 'light-snack',
     name: 'Light Snack',
     description: 'ADC on the menu. One shot, one snack. Mundo approved.',
-    image: '/images/adc_snack.jpg',
+    image: `${BASE}images/adc_snack.jpg`,
   },
   {
     id: 'big-snack',
@@ -29,7 +31,11 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <div className="hero__bg" aria-hidden="true" />
+        <div
+          className="hero__bg"
+          aria-hidden="true"
+          style={{ backgroundImage: `url(${BASE}images/mundo_wallpaper.jpg)` }}
+        />
         <h1 className="hero__title">
           PUSH
           <br />

@@ -53,7 +53,7 @@ function MyOrders() {
                 <p className="order-item__total">Total: ${total.toFixed(2)}</p>
               </div>
               <a
-                href={`/receipts/${order.id}.pdf`}
+                href={`${import.meta.env.BASE_URL}receipts/${order.id}.pdf`}
                 download={`${order.id}-receipt.pdf`}
                 className="order-item__receipt-btn"
               >

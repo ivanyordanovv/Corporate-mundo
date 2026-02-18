@@ -3,6 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
+const base = import.meta.env.BASE_URL
+if (typeof document !== 'undefined') {
+  document.body.style.backgroundImage = `url(${base}images/mundo_wallpaper.jpg)`
+  document.body.style.backgroundSize = 'cover'
+  document.body.style.backgroundPosition = 'center'
+  document.body.style.backgroundRepeat = 'no-repeat'
+  document.body.style.backgroundAttachment = 'fixed'
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

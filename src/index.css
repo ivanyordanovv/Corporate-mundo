@@ -28,7 +28,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #1e3a5f url(/images/mundo_wallpaper.jpg) center/cover no-repeat fixed;
+  background-color: #1e3a5f;
 }
 
 body::before {
@@ -115,7 +115,9 @@ a:hover {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url(/images/mundo_wallpaper.jpg) center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__bg::after {
