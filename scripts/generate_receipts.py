@@ -12,7 +12,7 @@ from fpdf import FPDF
 ORDERS = [
     {
         "id": "MUNDO-001",
-        "date": "2025-02-01",
+        "date": "2026-02-18",
         "items": [
             ("Light Snack", 1, 299),
             ("Big Snack", 1, 599),
@@ -20,7 +20,7 @@ ORDERS = [
     },
     {
         "id": "MUNDO-002",
-        "date": "2025-02-10",
+        "date": "2026-02-18",
         "items": [
             ("Executive Suitcase", 1, 449),
             ("Corporate Telephone", 1, 199),

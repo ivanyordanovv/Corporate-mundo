@@ -4,7 +4,7 @@ import { useState } from 'react'
 const ORDERS = [
   {
     id: 'MUNDO-001',
-    date: '2025-02-01',
+    date: '2026-02-18',
     items: [
       { name: 'Light Snack', qty: 1, price: 299 },
       { name: 'Big Snack', qty: 1, price: 599 },
@@ -12,7 +12,7 @@ const ORDERS = [
   },
   {
     id: 'MUNDO-002',
-    date: '2025-02-10',
+    date: '2026-02-18',
     items: [
       { name: 'Executive Suitcase', qty: 1, price: 449 },
       { name: 'Corporate Telephone', qty: 1, price: 199 },
