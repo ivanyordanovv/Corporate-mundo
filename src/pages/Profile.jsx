@@ -57,7 +57,7 @@ function MyOrders() {
                 download={`${order.id}-receipt.pdf`}
                 className="order-item__receipt-btn"
               >
-                Download receipt
+                Download invoice
               </a>
             </li>
           )
