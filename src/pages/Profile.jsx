@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
+const today = () => new Date().toISOString().slice(0, 10)
+
 // Must match scripts/generate_receipts.py ORDERS
 const ORDERS = [
   {
     id: 'MUNDO-001',
-    date: '2026-02-18',
+    date: today(),
     items: [
       { name: 'Light Snack', qty: 1, price: 299 },
       { name: 'Big Snack', qty: 1, price: 599 },
@@ -12,7 +14,7 @@ const ORDERS = [
   },
   {
     id: 'MUNDO-002',
-    date: '2026-02-18',
+    date: today(),
     items: [
       { name: 'Executive Suitcase', qty: 1, price: 449 },
       { name: 'Corporate Telephone', qty: 1, price: 199 },
