@@ -56,7 +56,7 @@ function MyOrders() {
               </div>
               <a
                 href={`${import.meta.env.BASE_URL}receipts/${order.id}.pdf`}
-                download={`${order.id}-receipt.pdf`}
+                download={`${order.id}-invoice.pdf`}
                 className="order-item__receipt-btn"
               >
                 Download invoice
