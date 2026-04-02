@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import { PaymentModal, PaymentSuccess } from '../components/PaymentModal'
-
 const today = () => new Date().toISOString().slice(0, 10)
 
 // Must match scripts/generate_receipts.py SUBSCRIPTION_ORDERS
@@ -13,48 +10,8 @@ const SUBSCRIPTION_ORDERS = [
 ]
 
 export default function Subscription() {
-  const [pendingOrder, setPendingOrder] = useState(null)
-  const [successOrder, setSuccessOrder] = useState(null)
-
-  function handleDownloadClick(e, order, total) {
-    e.preventDefault()
-    setPendingOrder({ order, total })
-  }
-
-  function handleConfirm() {
-    const { order } = pendingOrder
-    const a = document.createElement('a')
-    a.href = `${import.meta.env.BASE_URL}receipts/${order.id}.pdf`
-    a.download = `${order.id}-invoice.pdf`
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-
-    setSuccessOrder(order)
-    setPendingOrder(null)
-  }
-
-  function handleCancel() {
-    setPendingOrder(null)
-  }
-
-  function handleSuccessClose() {
-    setSuccessOrder(null)
-  }
-
   return (
     <div className="subscription">
-      {pendingOrder && (
-        <PaymentModal
-          order={pendingOrder.order}
-          total={pendingOrder.total}
-          onConfirm={handleConfirm}
-          onCancel={handleCancel}
-        />
-      )}
-      {successOrder && (
-        <PaymentSuccess order={successOrder} onClose={handleSuccessClose} />
-      )}
 
       <h1 className="subscription__title">Subscription Invoices</h1>
       <p className="subscription__desc">
@@ -82,7 +39,6 @@ export default function Subscription() {
                 href={`${import.meta.env.BASE_URL}receipts/${order.id}.pdf`}
                 download={`${order.id}-invoice.pdf`}
                 className="order-item__receipt-btn"
-                onClick={(e) => handleDownloadClick(e, order, total)}
               >
                 Download Invoice
               </a>
