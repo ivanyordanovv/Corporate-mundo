@@ -33,7 +33,7 @@ ORDERS = [
 SUBSCRIPTION_ORDERS = [
     {
         "id": f"COOKIES-{str(i).zfill(3)}",
-        "date": "2026-04-02",
+        "date": "2026-03-03",
         "items": [("Cookies", 1, 5)],
     }
     for i in range(1, 6)
