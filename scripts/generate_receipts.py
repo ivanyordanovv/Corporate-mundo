@@ -2,8 +2,9 @@
 """
 Generate PDF receipts for Corporate Mundo orders.
 Run from project root: python scripts/generate_receipts.py
-Output: public/receipts/MUNDO-001.pdf, public/receipts/MUNDO-002.pdf
+Output: public/receipts/MUNDO-001.pdf, MUNDO-002.pdf, COOKIES-001..005.pdf
 """
+
 from pathlib import Path
 
 from fpdf import FPDF
@@ -26,6 +27,16 @@ ORDERS = [
             ("Corporate Telephone", 1, 199),
         ],
     },
+]
+
+# Subscription orders must match src/pages/Subscription.jsx
+SUBSCRIPTION_ORDERS = [
+    {
+        "id": f"COOKIES-{str(i).zfill(3)}",
+        "date": "2026-04-02",
+        "items": [("Cookies", 1, 5)],
+    }
+    for i in range(1, 6)
 ]
 
 
@@ -86,11 +97,12 @@ def main():
     out_dir = project_root / "public" / "receipts"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    for order in ORDERS:
+    all_orders = ORDERS + SUBSCRIPTION_ORDERS
+    for order in all_orders:
         path = generate_receipt(order, out_dir)
         print(f"Generated {path}")
 
-    print(f"Done. {len(ORDERS)} receipt(s) in {out_dir}")
+    print(f"Done. {len(all_orders)} receipt(s) in {out_dir}")
 
 
 if __name__ == "__main__":

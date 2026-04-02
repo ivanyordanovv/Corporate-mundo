@@ -560,3 +560,21 @@ button:focus-visible {
   color: var(--mundo-cream);
   opacity: 0.65;
 }
+
+/* Subscription page */
+.subscription {
+  padding: 1rem 0;
+}
+
+.subscription__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  color: var(--mundo-gold);
+}
+
+.subscription__desc {
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  color: var(--mundo-cream);
+  opacity: 0.85;
+}
