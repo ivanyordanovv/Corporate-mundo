@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 // Fixed date for documents/invoices/subscriptions per request
-const today = () => '2026-03-03'
+const today = () => '3th april'
 
 // Must match scripts/generate_receipts.py ORDERS
 const ORDERS = [
