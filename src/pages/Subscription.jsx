@@ -1,10 +1,10 @@
 // Must match scripts/generate_receipts.py SUBSCRIPTION_ORDERS
 const SUBSCRIPTION_ORDERS = [
-  { id: 'COOKIES-001', date: '3th april', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
-  { id: 'COOKIES-002', date: '3th april', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
-  { id: 'COOKIES-003', date: '3th april', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
-  { id: 'COOKIES-004', date: '3th april', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
-  { id: 'COOKIES-005', date: '3th april', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
+  { id: 'COOKIES-001', date: '3rd march', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
+  { id: 'COOKIES-002', date: '3rd march', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
+  { id: 'COOKIES-003', date: '3rd march', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
+  { id: 'COOKIES-004', date: '3rd march', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
+  { id: 'COOKIES-005', date: '3rd march', items: [{ name: 'Cookies', qty: 1, price: 5 }] },
 ]
 
 export default function Subscription() {
