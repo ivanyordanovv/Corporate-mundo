@@ -27,6 +27,14 @@ ORDERS = [
             ("Corporate Telephone", 1, 199),
         ],
     },
+    {
+        "id": "MUNDO-003",
+        "date": "2026-02-18",
+        "items": [
+            ("Executive Suitcase", 1, 449),
+            ("Corporate Telephone", 1, 199),
+        ],
+    },
 ]
 
 # Subscription orders must match src/pages/Subscription.jsx

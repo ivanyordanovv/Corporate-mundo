@@ -21,6 +21,14 @@ const ORDERS = [
       { name: 'Corporate Telephone', qty: 1, price: 199 },
     ],
   },
+  {
+    id: 'MUNDO-003',
+    date: today(),
+    items: [
+      { name: 'Executive Suitcase', qty: 1, price: 449 },
+      { name: 'Corporate Telephone', qty: 1, price: 199 },
+    ],
+  },
 ]
 
 function Dashboard() {
